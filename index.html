@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-800">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="weatherBg">
+    <header
+      class="flex justify-between items-center bg-black top-0 px-6 py-2 w-full rounded-b-2xl"
+    >
+      <img src="/mist-logo.svg" class="w-20" alt="" />
+      <button class="btn rounded-full btn-ghost" id="explore">Explore Weather</button>
+    </header>
+
+    <div class="flex items-center justify-center h-[calc(100vh_-_6rem)] my-10">
+      <!-- bg-gradient-to-br from-teal-400 to-pink-500 -->
+      <div
+        class="text-white rounded-[20px] max-w-[470px] w-[90%] px-9 py-10 text-center bg-[rgba(0,0,0,0.02)] border-slate-300/10 border shadow-md backdrop-blur-md"
+      >
+        <div class="flex">
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="Enter City Name"
+            spellcheck="false"
+            class="w-full bg-[rgba(0,0,0,0.02)] border-slate-300/10 border shadow-md backdrop-blur-md px-4 py-2 rounded-full text-white outline-none"
+          />
+          <button
+            id="searchBtn"
+            class="ml-4 bg-[rgba(0,0,0,0.02)] border-slate-300/10 border shadow-md backdrop-blur-md rounded-full p-4 flex items-center justify-center"
+          >
+            <img src="/search.svg" alt="Search icon" class="w-6" />
+          </button>
+        </div>
+
+        <div id="invalid" class="my-6 hidden">Not Found</div>
+
+        <div id="info" class="hidden">
+          <img
+            src="/Sunny with cloud.svg"
+            class="weather-icon w-44 sm:w-48 mx-auto mt-6"
+            alt="Weather icon"
+            id="weatherImg"
+          />
+
+          <h1 class="text-5xl sm:text-6xl font-semibold" id="temperature">
+            - - -°C
+          </h1>
+          <h2 class="text-2xl sm:text-3xl font-normal mt-0" id="cityName">
+            - - -
+          </h2>
+
+          <div class="details flex justify-between p-5 mt-10">
+            <div class="col">
+              <img
+                src="/water.svg"
+                alt="Water design"
+                class="w-8 sm:w-10 mr-4"
+              />
+              <div>
+                <p
+                  class="humidity text-xl sm:text-2xl font-semibold mt-1"
+                  id="humidity"
+                >
+                  - -
+                </p>
+                <p class="text-gray-100">Humidity</p>
+              </div>
+            </div>
+            <div class="col">
+              <img
+                src="/wind (2).svg"
+                alt="Water design"
+                class="w-8 sm:w-10 mr-4"
+              />
+              <div>
+                <p
+                  class="wind text-xl sm:text-2xl font-semibold mt-1"
+                  id="wind"
+                >
+                  - -
+                </p>
+                <p class="text-gray-100">Wind</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-black px-8 pt-7 pb-8 w-full rounded-t-3xl">
+      <div class="flex justify-between items-center">
+        <img src="/mist-logo.svg" class="w-16" alt="" />
+        <p class="text-right">Weather at your finger tips</p>
+      </div>
+      <p class="mt-5 text-center">
+        Copyright @ 2023. Made by
+        <a class="underline" href="https://samy01.netlify.app">SamY</a> with 💖
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
